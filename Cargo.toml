@@ -1,3 +1,6 @@
 [workspace]
-members = ["lf-watermark"]
+members = ["packages/by-chart"]
 resolver = "2"
+
+[workspace.package]
+repository = "https://github.com/biyard/dioxus-library.git"

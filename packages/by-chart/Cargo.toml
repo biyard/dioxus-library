@@ -1,0 +1,26 @@
+[package]
+name = "by-chart"
+version = "0.1.0"
+edition = "2021"
+description = "Dioxus based circle, bar graph library"
+resolver = "2"
+license = "MIT"
+keywords = ["circle graph", "bar graph" ]
+repository.workspace = true
+
+[dependencies]
+dioxus = { version = "0.6.0-alpha.5", features = [
+  "default",
+  "fullstack",
+  "router",
+] }
+wasm-bindgen = { version = "0.2.95", optional = true }
+wasm-bindgen-futures = { version = "0.4.42", optional = true }
+web-sys = { version = "0.3.72", optional = true}
+dioxus-logger = "0.5.1"
+
+[features]
+default = []
+server = []
+lambda = []
+web = ["web-sys", "wasm-bindgen", "wasm-bindgen-futures"]
